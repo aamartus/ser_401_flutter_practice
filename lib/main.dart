@@ -102,6 +102,13 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            const TextField(
+              obscureText: false,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Sample Text Field',
+              ),
+            )
           ],
         ),
       ),
