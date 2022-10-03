@@ -78,6 +78,9 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text(
               'SER401 Sample Project',
             ),
+            const Text(
+                'The text you entered is...'
+            ),
             Text(
               '$_entry',
               style: Theme.of(context).textTheme.headline4,
