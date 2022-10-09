@@ -92,7 +92,40 @@ class _MyHomePageState extends State<MyHomePage> {
                 labelText: 'Sample Text Field',
               ),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const NewPage()),
+                );
+              },
+              child: const Text("Go to next page!")
+            )
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class NewPage extends StatelessWidget {
+  const NewPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('New Page'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const MyApp()),
+            );
+          },
+          child: const Text('Go back!'),
         ),
       ),
     );
